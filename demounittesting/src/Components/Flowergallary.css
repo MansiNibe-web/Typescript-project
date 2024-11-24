@@ -1,0 +1,79 @@
+/* Flower Gallery Section Styling */
+.flower-gallery {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Gallery Grid with 3 columns */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    align-items: stretch;
+    grid-auto-rows: minmax(200px, auto); /* Ensures cards have a minimum height */
+}
+
+/* Individual Card Styling */
+.flower-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flower-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image Styling */
+.flower-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Card Content */
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+}

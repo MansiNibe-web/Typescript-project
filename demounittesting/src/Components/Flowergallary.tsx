@@ -1,12 +1,19 @@
-// Flowergallary.js
 import Flowercard from './Flowercard';
 import './Flowergallary.css';
 
-const flowers = [
+// Define the structure of each flower using TypeScript interfaces
+interface Flower {
+  image: string;
+  title: string;
+  description: string;
+}
+
+// Define flowers array directly without useMemo
+const flowers: Flower[] = [
   {
     image: "https://cdn.pixabay.com/photo/2023/05/13/14/35/white-flower-7990645_960_720.jpg",
-    title: "Cushion Chrysanthemum",
-    description: "A variety of the common chrysanthemum, known for its round, cushion-like shape."
+    title: "Cushion ",
+    description: "A variety of the common chrysanthemum."
   },
   {
     image: "https://i.pinimg.com/736x/21/e9/35/21e9350465624bf960b355a5b5f94fcf.jpg",
@@ -20,8 +27,8 @@ const flowers = [
   },
   {
     image: "https://plus.unsplash.com/premium_photo-1676478746990-4ef5c8ef234a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Cushion Chrysanthemum",
-    description: "A variety of the common chrysanthemum, known for its round, cushion-like shape."
+    title: "Cushion ",
+    description: "A variety of the common chrysanthemum."
   },
   {
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBwARZpC1OVgQCHh9JbNmL52o4rWFjVwlEw&s",
@@ -35,8 +42,8 @@ const flowers = [
   },
   {
     image: "https://static.vecteezy.com/system/resources/thumbnails/038/112/743/small/ai-generated-vibrant-single-flower-up-close-against-a-backdrop-of-vivid-colors-nature-s-palette-ai-generated-photo.jpg",
-    title: "Cushion Chrysanthemum",
-    description: "A variety of the common chrysanthemum, known for its round, cushion-like shape."
+    title: "Cushion ",
+    description: "A variety of the common chrysanthemum"
   },
   {
     image: "https://i.pinimg.com/736x/21/e9/35/21e9350465624bf960b355a5b5f94fcf.jpg",
@@ -57,7 +64,9 @@ const Flowergallary = () => (
     </header>
     <section className="gallery">
       {flowers.map((flower, index) => (
-        <Flowercard key={index} {...flower} />
+        <div key={index} data-testid="flower-card">
+          <Flowercard {...flower} />
+        </div>
       ))}
     </section>
   </div>

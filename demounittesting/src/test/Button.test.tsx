@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom"; // For better matchers like toBeInTheDocument
-import { describe, it, expect, vi } from "vitest"; // Import Vitest functions explicitly
+import "@testing-library/jest-dom"; 
+import { describe, it, expect, vi } from "vitest"; 
 import Button from "../Components/Button";
 
 describe("Button Component", () => {

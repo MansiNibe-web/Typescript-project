@@ -1,7 +1,7 @@
 import React from "react";
 
 interface FooterProps {
-  text: string; // Define the expected 'text' prop
+  text: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ text }) => {

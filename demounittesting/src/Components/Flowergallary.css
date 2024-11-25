@@ -7,17 +7,16 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Gallery Grid with 3 columns */
+ 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Space between cards */
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 20px;   
     align-items: stretch;
-    grid-auto-rows: minmax(200px, auto); /* Ensures cards have a minimum height */
+    grid-auto-rows: minmax(200px, auto);  
 }
 
-/* Individual Card Styling */
-.flower-card {
+ .flower-card {
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -38,7 +37,6 @@
     border-bottom: 1px solid #ddd;
 }
 
-/* Card Content */
 .card-body {
     padding: 15px;
     text-align: left;
@@ -57,16 +55,15 @@
     line-height: 1.5;
 }
 
-/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr);  
     }
 }
 
 @media (max-width: 600px) {
     .gallery {
-        grid-template-columns: 1fr; /* 1 column for small screens */
+        grid-template-columns: 1fr;  
     }
 
     .card-title {

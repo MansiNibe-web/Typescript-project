@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom'; // To simulate routing for the Link component
+import { MemoryRouter } from 'react-router-dom'; 
 import Home from '../Components/Home';
 import { describe, expect, test } from 'vitest';
 
@@ -24,8 +24,8 @@ describe('Home Component', () => {
       </MemoryRouter>
     );
 
-    const flowerCards = screen.getAllByRole('img'); // Based on the mock, Flowercards will have <img> tags
-    expect(flowerCards.length).toBe(6); // 6 featured flowers in the array
+    const flowerCards = screen.getAllByRole('img');  
+    expect(flowerCards.length).toBe(6);  
   });
 
   test('renders the Flowercard with correct image, title, and description', () => {

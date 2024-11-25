@@ -1,15 +1,13 @@
 import Flowercard from './Flowercard';
 import './Flowergallary.css';
 
-// Define the structure of each flower using TypeScript interfaces
-interface Flower {
+ interface Flower {
   image: string;
   title: string;
   description: string;
 }
 
-// Define flowers array directly without useMemo
-const flowers: Flower[] = [
+ const flowers: Flower[] = [
   {
     image: "https://cdn.pixabay.com/photo/2023/05/13/14/35/white-flower-7990645_960_720.jpg",
     title: "Cushion ",

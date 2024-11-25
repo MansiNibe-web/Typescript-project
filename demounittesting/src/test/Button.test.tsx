@@ -15,7 +15,8 @@ describe("Button Component", () => {
     render(<Button label="Click me" onClick={handleClick} />);
     const buttonElement = screen.getByText("Click me");
     fireEvent.click(buttonElement);
-    expect(handleClick).toHaveBeenCalledTimes(1);
+    fireEvent.click(buttonElement);
+    expect(handleClick).toHaveBeenCalledTimes(2);
   });
 
   it("applies the correct className", () => {
